@@ -2,10 +2,10 @@ import React from 'react';
 
 const Clock = () => {
   const [currentTime, setCurrentTime] = React.useState(new Date());
-  const clockRef = React.useRef(null);
+  const clockRef = React.useRef();
 
   React.useEffect(() => {
-    setInterval(() => {
+    clockRef.current = setInterval(() => {
       setCurrentTime(new Date());
     }, 1000);
 

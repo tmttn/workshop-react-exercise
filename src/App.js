@@ -1,10 +1,10 @@
-import {Route, Switch} from 'react-router-dom';
+import { Route, Switch } from "react-router-dom";
 
-import './styles/app.scss';
-import Clock from './components/Clock';
-import Stopwatch from './components/Stopwatch';
-import ShowsOverview from './pages/showsOverview/ShowsOverview';
-import Nav from './components/Nav';
+import "./styles/app.scss";
+import Clock from "./components/Clock";
+import Stopwatch from "./components/Stopwatch";
+import ShowsOverview from "./pages/showsOverview/ShowsOverview";
+import Nav from "./components/Nav";
 
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
       <Nav />
       <Switch>
         <Route exact path="/" component={Clock} />
+        <Route exact path="/stopwatch" component={Stopwatch} />
       </Switch>
     </div>
   );
